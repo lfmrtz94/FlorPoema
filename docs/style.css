@@ -1,0 +1,77 @@
+body{
+  display: flex;
+  background: pink;
+}
+.titulo{
+  font-family: 'Brush Script MT';
+  color:#000000;
+  font-size: 40px;
+}
+.titulo1{
+  font-family: 'Brush Script MT';
+  color:#000000;
+  font-size: 50px;
+}
+
+.stem-big{
+  stroke-dasharray: 2000;
+  animation: draw-big-stem 3s linear forwards;
+}
+
+.stem-small{
+  stroke-dasharray: 800;
+  animation: draw-small-stem 4s linear 2s forwards;
+  stroke-opacity:0;
+  fill-opacity:0;
+}
+
+.leaf{
+  opacity: 0;
+  animation: draw-leaf 2s linear 6s forwards;
+}
+
+.flower{
+  opacity: 0;
+  animation: draw-flower 2s linear 7s forwards;
+}
+
+@keyframes draw-big-stem {
+  0%{
+    stroke-dashoffset: 2500;
+    fill-opacity:0;
+  }
+  60%{
+    fill-opacity:0;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    fill-opacity:1;
+  }
+}
+
+@keyframes draw-small-stem {
+  0%{
+    stroke-dashoffset: -800;
+    stroke-opacity: 1;
+  }
+  60%{
+    fill-opacity:0;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    fill-opacity:1;
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes draw-flower{
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes draw-leaf{
+  100%{
+    opacity: 1;
+  }
+}
